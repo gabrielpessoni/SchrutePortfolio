@@ -6,6 +6,7 @@
     --bg-dark: #212226; 
     --light-gray: #E0DEDE;
     --menu-height: 75px;
+    --medium-grey: #2F3034;
 }
 
 *{
@@ -43,6 +44,20 @@ button{
     color: white;
     font-weight: bold;
     font-size: 18px;
+}
+
+.secondary-button{
+    background: var(--medium-grey);
+    border: 1px solid var(--purple);
+    color: var(--green);
+    font-weight: bold;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.secondary-button img{
+    margin-right: 15px;
 }
 
 .title-purple{
@@ -185,9 +200,10 @@ nav ul a svg{
 }
 
 .portfolio .portfolio-container{
-    margin-top: 100px;
+    margin: 100px auto;
     display: flex;
     justify-content: space-between; 
+    max-width: 1200px;
 }
 
 .portfolio .portfolio-container .portfolio-card{
@@ -250,6 +266,38 @@ nav ul a svg{
 p{
     margin: 0;
 }
+
+/*Curriculum*/
+
+.curriculum{
+    padding: 0 100px;
+    text-align: center;
+}
+
+.curriculum .container{
+    display: flex;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.curriculum .container .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    align-items: center;
+}
+
+.curriculum .container .content .curriculum-info{
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-gap: 1rem;
+    margin-bottom: 50px;
+}
+
+
+
 /* Responsividade*/ 
 
 @media (max-width: 1000px){
@@ -301,6 +349,17 @@ p{
 
     .portfolio{
         height: 100%;
+    }
+
+    .curriculum .container{
+        flex-wrap: wrap;
+    }
+
+    .curriculum .container .curriculum-img{
+        display: block;
+        margin: 0 auto 50px;
+        width: 100%;
+        max-width: 520px;
     }
 }
 
@@ -374,6 +433,13 @@ p{
         margin: 100px 0 50px;
     }
 
+    .curriculum{
+        padding: 0 20px;
+    }
+
+    .curriculum .container .content .curriculum-info{
+        padding: 0 15px;
+    }
 
   
 }
